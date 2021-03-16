@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   
+    <meta charset="UTF-8">
+        <title>Планувальник</title>
+
+        <script src="/eel.js"></script> 
+       
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="MainManager.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+
+    <body>
+        <div id="taskbar" class="header">
+        <h2>My To Do List</h2>
+        <ul id="myUL">
+         
+        </ul>
+      </div>
+        <div class=vod>
+            <form action="#"></form>
+            <div class=nametex>
+            <input type="text" id="name_task" placeholder="The name of the task">
+            <button class="button"  type="submit" value="reg"onclick="newElement()" >save</button>
+            </div>
+        <div class=notepad>
+            <textarea type="text" id="task_text" placeholder="Your tasks ... "></textarea>
+
+        </div> 
+         <div class=datecl>
+            <input type="date" name="datetask" id="task_data">
+        </div>
+        </div>
+      
+        
+        
+
+        <script >
+                var doc = document;
+                let button = doc.querySelector("button");
+                        button.addEventListener("click", compil );
+                    
+                        async function compil()
+                        {
+                            let name_task = doc.querySelector("#name_task").value;
+                            let task_text = doc.querySelector("#task_text").value;
+                            let task_data = doc.querySelector("#task_data").value;
+                        
+                            console.log();
+                
+                            await eel.compil(name_task, task_text,task_data);
+                            eel.expose(parsingid);
+                            function parsingid(idid){
+                                console.log(idid);}
+                            
+                                
+                        }
+                     
+                var myNodelist = doc.getElementsByTagName("LI");
+                var i;
+                for (i = 0; i < myNodelist.length; i++) {
+                     var span = doc.createElement("SPAN");
+                     var txt = doc.createTextNode("\u00D7");
+                     span.className = "close";
+                     span.appendChild(txt);
+                     myNodelist[i].appendChild(span);
+                    }
+                    // Нажмите на кнопку закрыть, чтобы скрыть текущий элемент списка 
+                    var close = doc.getElementsByClassName("close");
+                    var i;
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function() {
+                          var div = this.parentElement;
+                          div.style.display = "none";
+                    
+                          
+                    }
+                    }
+                    
+                    function newElement() {
+                        var li = doc.createElement("li");
+                        var inputValue = doc.getElementById("name_task").value;
+                        var t = doc.createTextNode(inputValue);
+                        li.appendChild(t);
+                        if (inputValue === '') {
+                            alert("Вы должны что-то написать!");
+                        } else {
+                            doc.getElementById("myUL").appendChild(li);
+                        }
+                        doc.getElementById("name_task").value;
+
+                        var span = doc.createElement("SPAN");
+                        var txt = doc.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        li.appendChild(span);
+
+                        for (i = 0; i < close.length; i++) {
+                            close[i].onclick = function() {
+                            var div = this.parentElement;
+                            div.style.display = "none";
+                            }
+                        }
+                        }
+                   
+                   
+            </script>
+        
+    </body>
+
+
+
+</html>

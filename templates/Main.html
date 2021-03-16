@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="UTF-8">
+        <title>Планувальник</title>
+
+        <script src="/eel.js"></script> 
+       
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="Main.css">
+        <link rel="import" href="manager.html">
+        <link rel="import" href="validator.html">
+        <link rel="import" href="Good_reyestration.html">
+    </head>
+	
+    <body>
+   
+    <div class="box">
+        <form action="#"></form>
+    <div>
+        <input name="first_input" id="login" type="text" placeholder="Enter your E-mail">
+        <input name="second_input" id="pas" type="password" placeholder="Password">  
+    </div>
+   <div >
+        <button class="button_open" type="submit" value="register">Next</button>
+        <button class="button_registration" type="submit" value="register" >Registration</button>
+    
+    </div> 
+   
+    <script >
+    
+        let button_registration = document.querySelector(".button_registration");
+            button_registration.addEventListener("click", addUser);
+        
+             async function addUser(){
+                let login = document.querySelector("#login").value;
+                let pas = document.querySelector("#pas").value;
+
+                await eel.registration_user(login, pas);
+                } 
+        let button_open = document.querySelector(".button_open");
+             button_open.addEventListener("click", sendData);
+        
+             async function sendData(){
+                let login = document.querySelector("#login").value;
+                let pas = document.querySelector("#pas").value;
+
+                console.log(login);
+
+                  await eel.recv_data(login, pas);
+                 } 
+        eel.expose(login_yest);
+        function login_yest(x) {
+            location.href="validator.html"
+        }
+        eel.expose(New_user);
+        function New_user(xe) {
+            location.href="Good_reyestration.html"    
+        } 
+        eel.expose(log_user);
+        function log_user(q) {
+            location.href="manager.html"    
+        }                            
+    </script>
+    </body>
+
+</html>

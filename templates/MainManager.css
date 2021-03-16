@@ -1,0 +1,193 @@
+body { 
+    background: url(/Background.gif) no-repeat center center ; /* Шлях до фоновому зображенню */
+    margin: 0px;
+    padding: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+   
+    display: flex
+
+  }
+.notepad{
+    padding-top: 10px; 
+    outline: none;
+  }
+.notepad [type=text]{
+     display: flex;
+font-size: 15px!important;
+outline: none;
+padding-left: 6px;
+background: linear-gradient(90deg, #d53369a9 0%, #daaf51ab 100%);
+color:rgba(255, 255, 255, 0.952);
+font-size: 15spx;
+font-style: italic; 
+font-family: 'Montserrat', sans-serif;
+border-radius: 20px;
+border:rgba(255, 255, 255, 0.952);
+height: 250px;
+ width:475px;
+ min-width: 50%;
+  max-width: 100%;
+  resize: none; 
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.nametex [type=text] {
+    outline: none;
+    background: linear-gradient(90deg, #ff003377 20%, #2f00ff81 100%);
+    color:rgba(255, 255, 255, 0.952);
+    font-size: 25spx;
+    padding-left: 14px;
+
+    border-radius: 25px;
+    border:rgba(255, 255, 255, 0.952);
+    height: 35px;
+    width:390px;
+     font-family: 'Montserrat', sans-serif;
+     text-transform: uppercase;
+    
+}
+.vod{
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-right: 25px;
+   
+}
+.button{
+    text-decoration:none;
+    text-align:center;  
+    
+    outline: none;
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    outline: none;
+    border:none; 
+
+
+    width: 0px;
+    padding-left: 24px;
+    padding-right: 57px;
+
+
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+
+    background-image: linear-gradient(to right, #eb63086e 0%, #4a30f081 51%, #282c0862 100%);
+    background-size: 200% auto;
+    
+  }
+
+.button:active{
+    text-decoration:none;
+    text-align:center;  
+    
+    outline: none;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.973);
+    padding: 10px;
+    outline: none;
+    border:none; 
+
+
+    width: 0px;
+    padding-left: 24px;
+    padding-right: 57px;
+
+
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+
+    background-image: linear-gradient(to right, #ef9ee4 0%, #1200b1a1 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+
+
+}
+textarea::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 20spx;
+    }
+input::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 20spx;
+    font-style: italic;}
+
+#taskbar{
+  padding-left: 2%; }
+ul li {
+    margin-top: 3px;
+    cursor: pointer;
+    position: relative;
+    padding: 7px 7px 7px 7px;
+    background: rgba(99, 46, 245, 0.459);
+    font-size: 12px;
+    transition: 0.2s;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+
+    /* сделайте элементы списка невыбираемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }  
+ul li:nth-child(odd) {
+    margin-top: 3px;
+    background: #ffffff8c;
+  } 
+ul li:hover {
+    background: rgba(255, 183, 75, 0.555);
+  } 
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  } 
+.close {
+    position: absolute;
+    left: 100%;
+    border-radius: 25px;
+    top: 0;
+    padding: 10px 10px 10px 10px;
+  } 
+.close:hover {
+    background-color: #f44336;
+    color: white;
+  } 
+.header {
+  background: rgb(45,232,217);
+  background: linear-gradient(214deg, rgba(240, 74, 110, 0.5) 30%, rgba(252,0,255,0.5) 100%);
+    padding: 30px 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }  
+h2 {
+  font-family: 'Arapey', serif;
+}  
+
+[type="date"]{
+  margin-top: 5px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+  border:rgba(255, 0, 0, 0.952);
+  outline: none;
+  width: 132px;
+  padding-left: 8px;
+  margin-left:71%;
+  background-color: #683ffd5d;
+  color: #fff;
+}
